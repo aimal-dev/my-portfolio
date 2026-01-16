@@ -19,7 +19,7 @@
          <nav className={styles.menu}>
             {/* These are essentially filtered views on the main dashboard page */}
              <div className={`${styles.menuItem} ${styles.active}`}>
-                 <layoutDashboard />
+                 <LayoutDashboard />
                  <span>Dashboard</span>
              </div>
              <Link href="/" className={styles.menuItem}>
