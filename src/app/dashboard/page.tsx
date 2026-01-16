@@ -9,10 +9,9 @@ import {
     getEducation, addEducation, updateEducation, deleteEducation,
     getAbout, updateAbout,
     getCertificates, addCertificate, updateCertificate, deleteCertificate,
-    getFooter, updateFooter,
+    getFooter, updateFooter, syncToSupabase,
     Project, HeroData, ContactData, Experience, Education, AboutData, Certificate, FooterData
 } from "@/lib/actions";
-import { syncToSupabase } from "@/lib/sync";
 import { useEffect, useState } from "react";
 import { Plus, Edit, Trash } from 'lucide-react';
 
