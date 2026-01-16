@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[11254,["/_next/static/chunks/b9b9d2442f12b17f.js","/_next/static/chunks/e981fe727f1cc27d.js","/_next/static/chunks/4f7c77150b57fc63.js","/_next/static/chunks/35bad6ee866b1f94.js"],"default"]
+2:I[11254,["/_next/static/chunks/b9b9d2442f12b17f.js","/_next/static/chunks/9a7a99a90dc7bc7e.js","/_next/static/chunks/4f7c77150b57fc63.js","/_next/static/chunks/35bad6ee866b1f94.js"],"default"]
 3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/_next/static/chunks/d46af3660980a075.css","style"]
-0:{"buildId":"I4MLRRgin0ByuyHAIZ6b4","rsc":["$","$1","c",{"children":[["$","$L2",null,{"contactInfo":{"email":"aimaldev5@gmail.com","phone":"+92 3182051416 & +92 3242022410"}}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/d46af3660980a075.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/35bad6ee866b1f94.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"1bIPzobWAn8q1RTZhoQ7E","rsc":["$","$1","c",{"children":[["$","$L2",null,{"contactInfo":{"email":"aimaldev5@gmail.com","phone":"+92 3182051416 & +92 3242022410"}}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/d46af3660980a075.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/35bad6ee866b1f94.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
