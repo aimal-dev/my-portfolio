@@ -49,7 +49,7 @@ export default function Hero({ data }: HeroProps) {
           <h2 className={styles.role}>{data.role}</h2>
           
           <div className={styles.commentBlock}>
-            <p className="mono text-secondary">// complete the game to continue</p>
+            <p className="mono text-secondary">// welcome to my digital playground</p>
             <p className="mono text-secondary">// you can also find me on Github</p>
             <p className="mono">
               <span className="purple">const</span> <span className="green">githubLink</span> = <a href={data.githubLink} className="orange">"{data.githubLink}"</a>
