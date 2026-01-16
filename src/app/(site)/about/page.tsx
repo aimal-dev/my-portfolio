@@ -90,8 +90,28 @@ export default function AboutPage() {
                                 <p key={i} className="fade-in">
                                     <span className={styles.lineNum}>{i + 1}</span> 
                                     <span className="text-secondary">{line}</span>
-                    </p>
+                                </p>
                             ))}
+                            {aboutData?.skills && aboutData.skills.length > 0 && (
+                                <div className="fade-in" style={{marginTop: '2.5rem', paddingLeft: '2.5rem'}}>
+                                    <p className="text-secondary" style={{marginBottom: '1rem'}}>{`// my-technical-skills /`}</p>
+                                    <div style={{display: 'flex', flexWrap: 'wrap', gap: '0.6rem'}}>
+                                        {aboutData.skills.map((skill, i) => (
+                                            <span key={i} style={{
+                                                background: 'rgba(67, 217, 173, 0.08)', 
+                                                color: '#43d9ad', 
+                                                padding: '5px 14px', 
+                                                borderRadius: '6px', 
+                                                fontSize: '0.85rem',
+                                                border: '1px solid rgba(67, 217, 173, 0.15)',
+                                                display: 'inline-block'
+                                            }}>
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </>
                     )}
 
