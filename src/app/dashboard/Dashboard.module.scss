@@ -149,3 +149,66 @@
 
     &:hover { background: #e8e8e8; }
  }
+
+.reorderList {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.reorderHeader {
+    display: grid;
+    grid-template-columns: 60px 2fr 2fr 120px;
+    padding: 1rem;
+    background: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    color: #595959;
+    font-size: 0.9rem;
+}
+
+.reorderItem {
+    display: grid;
+    grid-template-columns: 60px 2fr 2fr 120px;
+    padding: 1rem;
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+    cursor: grab;
+    list-style: none;
+    transition: box-shadow 0.2s;
+
+    &:active {
+        cursor: grabbing;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 10;
+        background: #fdfdfd;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.grip {
+    color: #bfbfbf;
+    display: flex;
+    justify-content: center;
+}
+
+.itemTitle {
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+.itemTech {
+    color: #8c8c8c;
+    font-size: 0.85rem;
+}
+
+.hint {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #8c8c8c;
+    font-style: italic;
+}

@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import { useFormStatus } from "react-dom";
 import styles from './Dashboard.module.scss';
 import { 
@@ -9,11 +10,12 @@ import {
     getEducation, addEducation, updateEducation, deleteEducation,
     getAbout, updateAbout,
     getCertificates, addCertificate, updateCertificate, deleteCertificate,
-    getFooter, updateFooter, syncToSupabase,
+    getFooter, updateFooter, syncToSupabase, updateProjectsOrder, updateExperienceOrder,
     Project, HeroData, ContactData, Experience, Education, AboutData, Certificate, FooterData
 } from "@/lib/actions";
 import { useEffect, useState } from "react";
-import { Plus, Edit, Trash } from 'lucide-react';
+import { Plus, Edit, Trash, GripVertical } from 'lucide-react';
+import { Reorder } from "framer-motion";
 
 function SubmitButton({ label }: { label: string }) {
     const { pending } = useFormStatus();
@@ -202,33 +204,41 @@ export default function Dashboard() {
                 )}
 
                 {!isAdding && !editingProject && (
-                    <table className={styles.table}>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Tech</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div className={styles.reorderList}>
+                        <div className={styles.reorderHeader}>
+                            <span>Order</span>
+                            <span>Title</span>
+                            <span>Tech</span>
+                            <span>Actions</span>
+                        </div>
+                        <Reorder.Group 
+                            axis="y" 
+                            values={projects} 
+                            onReorder={async (newOrder) => {
+                                setProjects(newOrder);
+                                await updateProjectsOrder(newOrder);
+                            }}
+                        >
                             {projects.map(p => (
-                                <tr key={p.id}>
-                                    <td>{p.id}</td>
-                                    <td>{p.title}</td>
-                                    <td>{p.tech.join(', ')}</td>
-                                    <td className={styles.actions}>
+                                <Reorder.Item key={p.id} value={p} className={styles.reorderItem}>
+                                    <div className={styles.grip}>
+                                        <GripVertical size={16} />
+                                    </div>
+                                    <div className={styles.itemTitle}>{p.title}</div>
+                                    <div className={styles.itemTech}>{p.tech.slice(0, 3).join(', ')}{p.tech.length > 3 ? '...' : ''}</div>
+                                    <div className={styles.actions}>
                                         <button className={styles.btnEdit} onClick={() => setEditingProject(p)}>
-                                            <Edit size={14} /> Edit
+                                            <Edit size={14} />
                                         </button>
                                         <button className={styles.btnDelete} onClick={() => handleDelete(p.id)}>
-                                            <Trash size={14} /> Delete
+                                            <Trash size={14} />
                                         </button>
-                                    </td>
-                                </tr>
+                                    </div>
+                                </Reorder.Item>
                             ))}
-                        </tbody>
-                    </table>
+                        </Reorder.Group>
+                        <p className={styles.hint}>* Drag the vertical icons to reorder projects</p>
+                    </div>
                 )}
             </div>
         )}
@@ -325,34 +335,44 @@ export default function Dashboard() {
                 )}
 
                 {!isAddingExp && !editingExp && (
-                     <table className={styles.table}>
-                        <thead>
-                            <tr>
-                                <th>Company</th>
-                                <th>Position</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div className={styles.reorderList}>
+                        <div className={styles.reorderHeader}>
+                            <span>Order</span>
+                            <span>Company</span>
+                            <span>Position</span>
+                            <span>Actions</span>
+                        </div>
+                        <Reorder.Group 
+                            axis="y" 
+                            values={experiences} 
+                            onReorder={async (newOrder) => {
+                                setExperiences(newOrder);
+                                await updateExperienceOrder(newOrder);
+                            }}
+                        >
                             {experiences.map(e => (
-                                <tr key={e.id}>
-                                    <td style={{display: 'flex', alignItems: 'center', gap: 10}}>
+                                <Reorder.Item key={e.id} value={e} className={styles.reorderItem}>
+                                    <div className={styles.grip}>
+                                        <GripVertical size={16} />
+                                    </div>
+                                    <div className={styles.itemTitle} style={{display: 'flex', alignItems: 'center', gap: 10}}>
                                         {e.icon && <img src={e.icon} alt="" style={{height: 20, width: 20, borderRadius: '50%'}} />}
                                         {e.company}
-                                    </td>
-                                    <td>{e.position}</td>
-                                    <td className={styles.actions}>
+                                    </div>
+                                    <div className={styles.itemTech}>{e.position}</div>
+                                    <div className={styles.actions}>
                                         <button className={styles.btnEdit} onClick={() => setEditingExp(e)}>
-                                            <Edit size={14} /> Edit
+                                            <Edit size={14} />
                                         </button>
                                         <button className={styles.btnDelete} onClick={() => handleDeleteExp(e.id)}>
-                                            <Trash size={14} /> Delete
+                                            <Trash size={14} />
                                         </button>
-                                    </td>
-                                </tr>
+                                    </div>
+                                </Reorder.Item>
                             ))}
-                        </tbody>
-                    </table>
+                        </Reorder.Group>
+                        <p className={styles.hint}>* Drag the vertical icons to reorder experience</p>
+                    </div>
                 )}
 
              </div>

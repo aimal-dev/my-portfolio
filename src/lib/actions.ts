@@ -517,3 +517,16 @@ export async function syncToSupabase() {
     return { success: false, error: errorMessage };
   }
 }
+export async function updateProjectsOrder(projects: Project[]) {
+  const db = await getDB();
+  db.projects = projects;
+  await saveDB(db);
+  return { success: true };
+}
+
+export async function updateExperienceOrder(experience: Experience[]) {
+  const db = await getDB();
+  db.experience = experience;
+  await saveDB(db);
+  return { success: true };
+}
