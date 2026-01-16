@@ -1,0 +1,123 @@
+.bookingSection {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.icon {
+  color: var(--accent-orange);
+}
+
+.iframeContainer {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(254, 127, 45, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--accent-orange);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 
+                0 0 30px rgba(254, 127, 45, 0.15);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+    opacity: 0.5;
+  }
+}
+
+.windowHeader {
+  height: 40px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1.5rem;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-color);
+
+  &:nth-child(1) { background: #ff5f56; }
+  &:nth-child(2) { background: #ffbd2e; }
+  &:nth-child(3) { background: #27c93f; }
+}
+
+.addressBar {
+  flex: 1;
+  background: var(--bg-primary);
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  opacity: 0.7;
+}
+
+.iframeWrapper {
+  width: 100%;
+  position: relative;
+  background: white; /* Iframe content is white, so we need a container background if it fails */
+}
+
+.iframe {
+  display: block;
+  /* Apply a slight filter to make it blend better, but keep it readable */
+  filter: contrast(0.95) saturate(0.9);
+}
+
+@media (max-width: 768px) {
+  .bookingSection {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}

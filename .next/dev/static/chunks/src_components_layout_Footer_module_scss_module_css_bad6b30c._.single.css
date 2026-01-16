@@ -1,0 +1,115 @@
+/* [project]/src/components/layout/Footer.module.scss.module.css [app-client] (css) */
+.Footer-module-scss-module__JLT4gq__footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  height: 50px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.Footer-module-scss-module__JLT4gq__left {
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__label {
+  border-right: 1px solid var(--border-color);
+  align-items: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__socialLink {
+  border-right: 1px solid var(--border-color);
+  width: 50px;
+  height: 100%;
+  color: var(--text-secondary);
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__socialLink:hover {
+  color: var(--text-primary);
+  background: #ffffff05;
+}
+
+.Footer-module-scss-module__JLT4gq__right {
+  height: 100%;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__githubLink {
+  border-left: 1px solid var(--border-color);
+  height: 100%;
+  color: var(--text-secondary);
+  align-items: center;
+  gap: .5rem;
+  padding: 0 1.5rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__githubLink:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .Footer-module-scss-module__JLT4gq__footer {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    min-height: 50px;
+    padding: 1rem 0;
+    position: relative;
+  }
+
+  .Footer-module-scss-module__JLT4gq__left {
+    border-bottom: 1px solid var(--border-color);
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .Footer-module-scss-module__JLT4gq__right {
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .Footer-module-scss-module__JLT4gq__githubLink {
+    border-left: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Footer-module-scss-module__JLT4gq__label {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer-module-scss-module__JLT4gq__label {
+    display: none;
+  }
+
+  .Footer-module-scss-module__JLT4gq__socialLink {
+    border-right: none;
+  }
+
+  .Footer-module-scss-module__JLT4gq__left {
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_layout_Footer_module_scss_module_css_bad6b30c._.single.css.map*/

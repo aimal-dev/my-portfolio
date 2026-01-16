@@ -1,0 +1,112 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.label {
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+}
+
+.socialLink {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.02);
+  }
+}
+
+.right {
+  display: flex;
+  height: 100%;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  border-left: 1px solid var(--border-color);
+  height: 100%;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    min-height: 50px;
+    flex-direction: column;
+    position: relative; /* Static positioning on mobile might be better to avoid overlapping */
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .left {
+    height: 50px;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right {
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .githubLink {
+    border-left: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .label {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .label {
+    display: none;
+  }
+  
+  .socialLink {
+    border-right: none;
+  }
+
+  .left {
+    gap: 1rem;
+  }
+}

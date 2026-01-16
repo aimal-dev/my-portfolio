@@ -1,0 +1,203 @@
+/* [project]/src/app/(site)/contact/Contact.module.scss.module.css [app-client] (css) */
+.Contact-module-scss-module__GnQFMG__container {
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__topHeader {
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  display: flex;
+  overflow: hidden;
+}
+
+.Contact-module-scss-module__GnQFMG__infoSide {
+  border-right: 1px solid var(--border-color);
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  padding: 2.5rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__title {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.Contact-module-scss-module__GnQFMG__list {
+  flex-direction: column;
+  gap: 1.2rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__item {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  align-items: center;
+  gap: .8rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__link {
+  transition: color .2s;
+}
+
+.Contact-module-scss-module__GnQFMG__link:hover {
+  color: var(--text-primary);
+}
+
+.Contact-module-scss-module__GnQFMG__codePreview {
+  background: var(--bg-primary);
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__codeBlock {
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.Contact-module-scss-module__GnQFMG__formsGrid {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 2rem;
+  width: 100%;
+  display: grid;
+}
+
+.Contact-module-scss-module__GnQFMG__formSide {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__form {
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__group {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+.Contact-module-scss-module__GnQFMG__group label {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: .9rem;
+}
+
+.Contact-module-scss-module__GnQFMG__input, .Contact-module-scss-module__GnQFMG__textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  padding: .8rem;
+  font-size: .9rem;
+}
+
+.Contact-module-scss-module__GnQFMG__input:focus, .Contact-module-scss-module__GnQFMG__textarea:focus {
+  border-color: var(--text-accent);
+  outline: none;
+  box-shadow: 0 0 0 2px #607b9633;
+}
+
+.Contact-module-scss-module__GnQFMG__input {
+  height: 44px;
+}
+
+.Contact-module-scss-module__GnQFMG__button {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  width: fit-content;
+  padding: .8rem 1.5rem;
+  font-size: .9rem;
+  transition: all .2s;
+}
+
+.Contact-module-scss-module__GnQFMG__button:hover:not(:disabled) {
+  background: var(--text-secondary);
+  color: var(--bg-primary);
+}
+
+.Contact-module-scss-module__GnQFMG__button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.Contact-module-scss-module__GnQFMG__bookingWrapper {
+  height: 100%;
+}
+
+.Contact-module-scss-module__GnQFMG__bookingWrapper .booking-section-wrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Contact-module-scss-module__GnQFMG__success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 1100px) {
+  .Contact-module-scss-module__GnQFMG__container {
+    padding: 2rem;
+  }
+
+  .Contact-module-scss-module__GnQFMG__topHeader {
+    flex-direction: column;
+  }
+
+  .Contact-module-scss-module__GnQFMG__infoSide {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+  }
+
+  .Contact-module-scss-module__GnQFMG__formsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .Contact-module-scss-module__GnQFMG__container {
+    padding: 1rem;
+  }
+
+  .Contact-module-scss-module__GnQFMG__formSide {
+    padding: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=src_app_%28site%29_contact_Contact_module_scss_module_css_bad6b30c._.single.css.map*/
