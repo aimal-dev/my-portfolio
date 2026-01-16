@@ -106,23 +106,6 @@ export default function Dashboard() {
           <button className={`${styles.navButton} ${activeTab === 'hero' ? styles.active : ''}`} onClick={() => setActiveTab('hero')}>Hello Page CMS</button>
           <button className={`${styles.navButton} ${activeTab === 'contact' ? styles.active : ''}`} onClick={() => setActiveTab('contact')}>Contact Info CMS</button>
           <button className={`${styles.navButton} ${activeTab === 'footer' ? styles.active : ''}`} onClick={() => setActiveTab('footer')}>Footer CMS</button>
-          
-          <div style={{marginTop: 'auto', padding: '10px'}}>
-              <button 
-                className={styles.submitBtn} 
-                style={{width: '100%', background: '#3ecf8e', color: 'black'}}
-                onClick={async () => {
-                    if(confirm('Sync local db.json to Supabase? This will overwrite Supabase data.')) {
-                        const res = await syncToSupabase();
-                        if(res.success) alert('Sync Successful!');
-                        else alert('Sync Failed: ' + res.error);
-                        refreshData();
-                    }
-                }}
-              >
-                  🔄 Sync to Supabase
-              </button>
-          </div>
       </nav>
       
       <main className={styles.mainPanel}>
