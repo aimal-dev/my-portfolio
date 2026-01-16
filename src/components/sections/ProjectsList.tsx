@@ -67,6 +67,7 @@ export default function ProjectsPage({ projects }: { projects: Project[] }) {
                </div>
                
                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{project.title}</h3>
                   <p className={styles.description}>{project.description}</p>
                   <div className={styles.tags}>
                     {project.tech.map(t => (
