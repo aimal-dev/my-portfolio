@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///D:/my-portfolio/src/app/layout.scss"],"sourcesContent":[".layout-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 100vh;\r\n  background-color: var(--bg-primary);\r\n}\r\n\r\n.main-content {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  position: relative;\r\n  /* Add padding-bottom to account for fixed footer */\r\n  padding-bottom: 50px; \r\n  overflow: hidden; /* For animations */\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA"}}]
-}
