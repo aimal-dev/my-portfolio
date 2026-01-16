@@ -1,16 +1,8 @@
-"use client";
-
 import styles from './Footer.module.scss';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
-import { getFooter, FooterData } from '@/lib/actions';
-import { useEffect, useState } from 'react';
+import { FooterData } from '@/lib/actions';
 
-export default function Footer() {
-  const [data, setData] = useState<FooterData | null>(null);
-
-  useEffect(() => {
-    getFooter().then(setData);
-  }, []);
+export default function Footer({ data }: { data: FooterData }) {
 
   return (
     <footer className={styles.footer}>
